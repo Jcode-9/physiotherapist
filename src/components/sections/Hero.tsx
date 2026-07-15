@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { styles } from "@/lib/constants";
 import { heroData } from "@/data/hero";
-
 import Button from "@/components/ui/Button";
 import Stat from "@/components/ui/Stat";
+import Badge from "../ui/Badge";
 
 export default function Hero() {
   return (
@@ -12,9 +12,9 @@ export default function Hero() {
         {/* Left column */}
         <div className="flex flex-col gap-6">
           {/* Badge */}
-          <p className="bg-blue-600 text-white rounded-full px-4 py-1 w-fit text-sm font-medium">
+          <Badge>
             {heroData.badge}
-          </p>
+          </Badge>
 
           {/* Heading */}
           <h1 className={styles.heading}>
@@ -52,7 +52,12 @@ export default function Hero() {
         {/* Right column */}
         <div>
           <div className="relative h-[550px] rounded-2xl bg-slate-200 shadow overflow-hidden">
-            <Image loading="eager" src="/images/physio2.jpg" fill alt="Hero" className="object-cover"/>
+            <Image priority src="/images/physio2.jpg" fill alt="Fizjoterapeuta podczas terapii z pacjentem" className="object-cover"/>
+            <div className="bg-slate-400/80 backdrop-blur-xs px-6 py-5 rounded-3xl absolute bottom-2 right-2 text-right">
+              <p className="text-2xl">⭐⭐⭐⭐⭐</p>
+              <p className="text-3xl text-white">4.9/5</p>
+              <p className="text-lg text-white">Średnia ocena Google</p>
+            </div>
           </div>
         </div>
       </div>
