@@ -7,7 +7,7 @@ import Badge from "../ui/Badge";
 
 export default function Hero() {
   return (
-    <section className={`${styles.section}`}>
+    <section className={`${styles.section} min-h-[calc(100vh)] flex items-center`}>
       <div className={`${styles.container} grid grid-cols-2 gap-12 items-center`}>
         {/* Left column */}
         <div className="flex flex-col gap-6">

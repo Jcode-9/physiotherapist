@@ -1,11 +1,12 @@
 interface CardProps {
   children: React.ReactNode;
+  className?: string;
 }
 
-export default function Card({ children }: CardProps) {
+export default function Card({ children, className = "" }: CardProps) {
   return (
     <div
-      className="
+      className={`
         rounded-2xl
         border
         border-slate-200
@@ -16,7 +17,8 @@ export default function Card({ children }: CardProps) {
         hover:-translate-y-2
         hover:border-blue-200
         hover:shadow-xl
-      "
+        ${className}
+      `}
     >
       {children}
     </div>
