@@ -15,7 +15,7 @@ export default function TestimonialCard({
   testimonial,
 }: TestimonialCardProps) {
   return (
-    <Card className="flex h-full flex-col">
+    <Card className="min-w-[320px] snap-center lg:min-w-100">
     <p className="mb-3 text-lg">
         {"⭐".repeat(testimonial.rating)}
     </p>

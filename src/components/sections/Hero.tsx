@@ -8,26 +8,26 @@ import Badge from "../ui/Badge";
 export default function Hero() {
   return (
     <section className={`${styles.section} min-h-[calc(100vh)] flex items-center`}>
-      <div className={`${styles.container} grid grid-cols-2 gap-12 items-center`}>
+      <div className={`${styles.container} grid grid-cols-1 items-center gap-12 lg:grid-cols-2`}>
         {/* Left column */}
-        <div className="flex flex-col gap-6">
+        <div>
           {/* Badge */}
           <Badge>
             {heroData.badge}
           </Badge>
-
+        <div className="flex flex-col gap-6">
           {/* Heading */}
           <h1 className={styles.heading}>
             {heroData.heading}
           </h1>
 
           {/* Description */}
-          <p className="text-slate-600 leading-7 max-w-lg">
+          <p className={styles.subheading}>
             {heroData.description}
           </p>
 
           {/* CTA */}
-          <div className="flex gap-4">
+          <div className="flex flex-col gap-4 sm:flex-row">
             <Button>
               {heroData.buttons.primary}
             </Button>
@@ -38,7 +38,7 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="flex gap-10 pt-4">
+          <div className="flex flex-wrap gap-8 pt-4">
             {heroData.stats.map((stat) => (
               <Stat
                 key={stat.label}
@@ -48,15 +48,15 @@ export default function Hero() {
             ))}
           </div>
         </div>
-
+        </div>
         {/* Right column */}
         <div>
-          <div className="relative h-[550px] rounded-2xl bg-slate-200 shadow overflow-hidden">
+          <div className="relative h-[350px] overflow-hidden rounded-2xl bg-slate-200 shadow lg:h-[550px]">
             <Image priority src="/images/physio2.jpg" fill alt="Fizjoterapeuta podczas terapii z pacjentem" className="object-cover"/>
-            <div className="bg-slate-400/80 backdrop-blur-xs px-6 py-5 rounded-3xl absolute bottom-2 right-2 text-right">
-              <p className="text-2xl">⭐⭐⭐⭐⭐</p>
-              <p className="text-3xl text-white">4.9/5</p>
-              <p className="text-lg text-white">Średnia ocena Google</p>
+            <div className="bg-slate-400/80 backdrop-blur-xs px-4 py-3 lg:px-5 lg:py-4 rounded-3xl absolute bottom-2 right-2 text-right">
+              <p className="text-xl lg:text-2xl">⭐⭐⭐⭐⭐</p>
+              <p className="text-2xl lg:text-3xl text-white">4.9/5</p>
+              <p className="text-md lg:text-lg text-white">Średnia ocena Google</p>
             </div>
           </div>
         </div>

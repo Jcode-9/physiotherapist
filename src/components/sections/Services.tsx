@@ -11,7 +11,7 @@ export default function Services() {
     <section className={styles.section}>
       <div className={`${styles.container} flex flex-col gap-16`}>
         <SectionHeading align="center" badge={servicesData.badge} title={servicesData.title} description={servicesData.description}></SectionHeading>
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {servicesData.services.map((service) => {
             const Icon = service.icon;
 
