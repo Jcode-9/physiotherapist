@@ -13,11 +13,11 @@ const variants = {
 
 export default function SectionHeading({align="left", badge, title, description} : SectionHeadingProps) {
     return(
-        <div className={`${variants[align]} flex flex-col gap-1`}>
+        <div className={`${variants[align]} flex flex-col`}>
             <Badge>
                 {badge}
             </Badge>
-            <h2 className={styles.heading}>{title}</h2>
+            <h2 className={`${styles.heading} pb-3`}>{title}</h2>
             <p className={styles.subheading}>{description}</p>
         </div>
     )
