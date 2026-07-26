@@ -24,9 +24,11 @@ export default function Services() {
                     {service.title}
                 </h3>
                 <p className="mb-8 leading-7 text-slate-600">
-                    {service.description}
+                    {service.shortDescription}
                 </p>
-                <Button variant="secondary">Dowiedz się więcej →</Button>
+                <a href={"#" + service.id}>
+                  <Button variant="secondary">Dowiedz się więcej →</Button>
+                </a>
               </Card>
             );
           })}
