@@ -1,3 +1,4 @@
+import { ServicesData } from "@/types/ServicesData";
 import {
   Stethoscope,
   Hand,
@@ -7,7 +8,7 @@ import {
   PersonStanding,
 } from "lucide-react";
 
-export const servicesData = {
+export const servicesData: ServicesData = {
   badge: "Usługi",
 
   title: "Kompleksowa opieka dopasowana do Twoich potrzeb",

@@ -1,20 +1,8 @@
 import Card from "./Card";
-import { LucideIcon } from "lucide-react";
 import Image from "next/image";
 import Button from "./Button";
 import { Check } from "lucide-react";
-
-interface Service {
-  id: string;
-  title: string;
-  shortDescription: string;
-  description: string;
-  image: string,
-  duration: string,
-  price: string,
-  benefits: string[]
-  icon: LucideIcon;
-}
+import type { Service } from "@/types/Service";
 
 interface ServiceDetailsCardProps {
   service: Service;

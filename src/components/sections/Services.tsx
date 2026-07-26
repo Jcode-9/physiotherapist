@@ -2,9 +2,8 @@ import { styles } from "@/lib/constants";
 import SectionHeading from "../ui/SectionHeading";
 import { servicesData } from "@/data/services";
 import Card from "../ui/Card";
-import { Icon } from "lucide-react";
-import { LucideIcon } from "lucide-react";
 import Button from "../ui/Button";
+import Link from "next/link";
 
 export default function Services() {
   return (
@@ -12,7 +11,7 @@ export default function Services() {
       <div className={`${styles.container} flex flex-col gap-16`}>
         <SectionHeading align="center" badge={servicesData.badge} title={servicesData.title} description={servicesData.description}></SectionHeading>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {servicesData.services.slice(0, 3).map((service, index) => {
+          {servicesData.services.slice(0, 3).map((service) => {
             const Icon = service.icon;
             return (
               <Card key={service.title}>
@@ -25,9 +24,9 @@ export default function Services() {
                 <p className="mb-8 leading-7 text-slate-600">
                     {service.shortDescription}
                 </p>
-                <a href={"#" + service.id}>
+                <Link href={`#${service.id}`}>
                   <Button variant="secondary">Dowiedz się więcej →</Button>
-                </a>
+                </Link>
               </Card>
             );
           })}
