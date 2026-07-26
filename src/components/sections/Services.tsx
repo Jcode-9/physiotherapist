@@ -12,9 +12,8 @@ export default function Services() {
       <div className={`${styles.container} flex flex-col gap-16`}>
         <SectionHeading align="center" badge={servicesData.badge} title={servicesData.title} description={servicesData.description}></SectionHeading>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {servicesData.services.map((service) => {
+          {servicesData.services.slice(0, 3).map((service, index) => {
             const Icon = service.icon;
-
             return (
               <Card key={service.title}>
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-100">
@@ -24,9 +23,11 @@ export default function Services() {
                     {service.title}
                 </h3>
                 <p className="mb-8 leading-7 text-slate-600">
-                    {service.description}
+                    {service.shortDescription}
                 </p>
-                <Button variant="secondary">Dowiedz się więcej →</Button>
+                <a href={"#" + service.id}>
+                  <Button variant="secondary">Dowiedz się więcej →</Button>
+                </a>
               </Card>
             );
           })}

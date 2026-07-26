@@ -1,9 +1,10 @@
 interface CardProps {
   children: React.ReactNode;
   className?: string;
+  id?: string;
 }
 
-export default function Card({ children, className = "" }: CardProps) {
+export default function Card({ children, className = "", id = "" }: CardProps) {
   return (
     <div
       className={`
@@ -19,6 +20,7 @@ export default function Card({ children, className = "" }: CardProps) {
         hover:shadow-xl
         ${className}
       `}
+      id={id}
     >
       {children}
     </div>

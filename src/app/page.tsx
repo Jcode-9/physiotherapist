@@ -6,6 +6,7 @@ import Pricing from '@/components/sections/Pricing';
 import Testimonials from '@/components/sections/Testimonials';
 import Faq from '@/components/sections/Faq';
 import Contact from '@/components/sections/Contact';
+import ServiceDetails from '@/components/sections/ServiceDetails';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Services></Services>
       <Pricing></Pricing>
       <Testimonials></Testimonials>
+      <ServiceDetails></ServiceDetails>
       <Faq></Faq>
       <Contact></Contact>
       <Footer></Footer>
