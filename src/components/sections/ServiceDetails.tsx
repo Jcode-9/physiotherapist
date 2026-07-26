@@ -4,9 +4,9 @@ import SectionHeading from "../ui/SectionHeading";
 import ServiceDetailsCard from "../ui/ServiceDetailsCard";
 
 export default function ServiceDetails() {
-    return(
+    return (
         <>
-            <section className={styles.section}>
+            <section id="detailed-services" className={styles.section}>
                 <div className={`${styles.container} flex flex-col gap-16`}>
                     <SectionHeading
                         align="center"
@@ -17,8 +17,8 @@ export default function ServiceDetails() {
 
                     {
                         servicesData.services.map((service, index) => (
-                        <ServiceDetailsCard key={service.id} service={service} variant={index % 2 === 0 ? "left" : "right"}></ServiceDetailsCard>
-                    ))}
+                            <ServiceDetailsCard key={service.id} service={service} variant={index % 2 === 0 ? "left" : "right"}></ServiceDetailsCard>
+                        ))}
                 </div>
             </section>
         </>

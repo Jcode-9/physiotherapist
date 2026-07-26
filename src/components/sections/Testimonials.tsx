@@ -5,7 +5,7 @@ import TestimonialCard from "../ui/TestimonialCard";
 
 export default function Testimonials() {
   return (
-    <section className={styles.section}>
+    <section id="testimonials" className={styles.section}>
       <div className={`${styles.container} flex flex-col gap-16`}>
         <SectionHeading align="center" badge={testimonialsData.badge} title={testimonialsData.title} description={testimonialsData.description}></SectionHeading>
         <div className="

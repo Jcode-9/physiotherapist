@@ -12,7 +12,7 @@ import Button from "../ui/Button";
 
 export default function Contact() {
   return (
-    <section className={styles.section}>
+    <section id="contact" className={styles.section}>
       <div className={`${styles.container} flex flex-col gap-16`}>
         <SectionHeading
           align="center"

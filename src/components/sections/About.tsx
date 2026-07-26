@@ -4,7 +4,7 @@ import { aboutData } from "@/data/about";
 import { styles } from "@/lib/constants";
 export default function About() {
   return (
-    <section className={styles.section}>
+    <section id="about" className={styles.section}>
       <div className={`${styles.container} flex flex-col gap-16`}>
         <SectionHeading
           align="center"

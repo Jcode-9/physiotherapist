@@ -34,7 +34,7 @@ export default function RootLayout({
           <div className="absolute right-[-250px] bottom-[-250px] h-[700px] w-[700px] rounded-full bg-cyan-400/15 blur-[180px]" />
         </div>
         <Navbar />
-        <main>{children}</main>
+        <main className="pt-10 lg:pt-0">{children}</main>
       </body>
     </html>
   );

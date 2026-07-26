@@ -4,13 +4,14 @@ import { heroData } from "@/data/hero";
 import Button from "@/components/ui/Button";
 import Stat from "@/components/ui/Stat";
 import Badge from "../ui/Badge";
+import Link from "next/link";
 
 export default function Hero() {
   return (
     <section className={`${styles.section} min-h-[calc(100vh)] flex items-center`}>
       <div className={`${styles.container} grid grid-cols-1 items-center gap-12 lg:grid-cols-2`}>
         {/* Left column */}
-        <div>
+        <div className="order-2 lg:order-1">
           {/* Badge */}
           <Badge>
             {heroData.badge}
@@ -28,12 +29,17 @@ export default function Hero() {
 
           {/* CTA */}
           <div className="flex flex-col gap-4 sm:flex-row">
+            
             <Button>
+              <Link href="#contact">
               {heroData.buttons.primary}
+              </Link>
             </Button>
 
             <Button variant="secondary">
+              <Link href="#detailed-services">
               {heroData.buttons.secondary}
+              </Link>
             </Button>
           </div>
 
@@ -50,7 +56,7 @@ export default function Hero() {
         </div>
         </div>
         {/* Right column */}
-        <div>
+        <div className="order-1 lg:order-2">
           <div className="relative h-[350px] overflow-hidden rounded-2xl bg-slate-200 shadow lg:h-[550px]">
             <Image priority src="/images/physio2.jpg" fill alt="Fizjoterapeuta podczas terapii z pacjentem" className="object-cover"/>
             <div className="bg-slate-400/80 backdrop-blur-xs px-4 py-3 lg:px-5 lg:py-4 rounded-3xl absolute bottom-2 right-2 text-right">

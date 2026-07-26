@@ -34,7 +34,7 @@ export default function ServiceDetailsCard({
 
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent rounded-2xl" />
       </div>
-      <div className="flex w-full flex-col justify-between p-10 lg:w-2/3">
+      <div className="flex w-full flex-col justify-between pt-6 p-2 lg:p-10 lg:w-2/3 lg:pt-0">
         <div>
           <div className="mb-6 flex items-center gap-4">
             <div className="rounded-2xl bg-blue-100 p-3 text-blue-600">
