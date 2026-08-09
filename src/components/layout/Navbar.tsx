@@ -47,7 +47,7 @@ export default function Navbar() {
   `}>
       <div className="flex justify-between h-20 bg-white items-center px-6 lg:px-8 max-w-7xl mx-auto">
         <h1 className="text-3xl font-bold tracking-tight text-slate-800">
-          <Link href="/">Physio<span className="text-blue-600">Pro</span></Link>
+          <Link href="#top">Physio<span className="text-blue-600">Pro</span></Link>
         </h1>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}

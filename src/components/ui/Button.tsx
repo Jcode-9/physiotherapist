@@ -1,7 +1,7 @@
-interface ButtonProps {
-    children: React.ReactNode;
-    variant?: "primary" | "secondary";
-    className?: string;
+interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode;
+  variant?: "primary" | "secondary";
 }
 const variants = {
         primary: "bg-blue-600 text-white hover:bg-blue-700",

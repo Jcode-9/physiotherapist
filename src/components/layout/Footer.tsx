@@ -178,7 +178,7 @@ export default function Footer() {
             </p>
 
             <Link
-              href="/"
+              href="#top"
               className="transition-colors hover:text-blue-400"
             >
               Wróć na górę ↑

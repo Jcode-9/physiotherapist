@@ -7,8 +7,7 @@ import {
   MapPin,
   Clock3,
 } from "lucide-react";
-import Input from "../ui/Input";
-import Button from "../ui/Button";
+import ContactForm from "../ui/ContactForm";
 
 export default function Contact() {
   return (
@@ -138,64 +137,7 @@ export default function Contact() {
 
             {/* Prawa strona - formularz */}
             <div className="w-full rounded-2xl border border-blue-100 bg-white p-5 shadow-sm sm:p-8">
-              <form className="flex w-full flex-col gap-6">
-                <Input
-                  label="Imię"
-                  placeholder="Jan Kowalski"
-                />
-
-                <Input
-                  label="E-mail"
-                  type="email"
-                  placeholder="jan@email.com"
-                />
-
-                <Input
-                  label="Telefon"
-                  type="tel"
-                  placeholder="+48 123 456 789"
-                />
-
-                <div className="flex flex-col gap-2">
-                  <label
-                    htmlFor="message"
-                    className="text-sm font-medium text-slate-700"
-                  >
-                    Wiadomość
-                  </label>
-
-                  <textarea
-                    id="message"
-                    rows={5}
-                    placeholder="Opisz krótko, w czym możemy Ci pomóc..."
-                    className="
-                      w-full
-                      resize-none
-                      rounded-xl
-                      border
-                      border-slate-200
-                      bg-white
-                      px-4
-                      py-3
-                      text-slate-800
-                      placeholder:text-slate-400
-                      outline-none
-                      transition-all
-                      duration-200
-                      focus:border-blue-500
-                      focus:ring-4
-                      focus:ring-blue-100
-                    "
-                  />
-                </div>
-
-                <Button
-                  variant="primary"
-                  className="w-full justify-center"
-                >
-                  Wyślij wiadomość
-                </Button>
-              </form>
+              <ContactForm/>
             </div>
           </div>
         </div>
