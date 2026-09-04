@@ -3,6 +3,7 @@ import Image from "next/image";
 import Button from "./Button";
 import { Check } from "lucide-react";
 import type { Service } from "@/types/Service";
+import Link from "next/link";
 
 interface ServiceDetailsCardProps {
   service: Service;
@@ -90,10 +91,12 @@ export default function ServiceDetailsCard({
               </p>
             </div>
           </div>
-
-          <Button className="justify-center">
-            Umów wizytę
-          </Button>
+          <Link href="#contact">
+            <Button className="justify-center">
+              Umów wizytę
+            </Button>
+          </Link>
+          
         </div>
       </div>
     </Card>

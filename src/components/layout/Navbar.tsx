@@ -50,7 +50,9 @@ export default function Navbar() {
           <Link href="#top">Physio<span className="text-blue-600">Pro</span></Link>
         </h1>
         <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+          aria-label={isMenuOpen ? "Zamknij menu" : "Otwórz menu"}
+          aria-expanded={isMenuOpen}
           className="lg:hidden"
         >
           {isMenuOpen ? (
@@ -108,11 +110,10 @@ export default function Navbar() {
             </Link>
 
             <div className="mt-6">
-              <Button>
-                <Link href="#contact">Umów wizytę</Link>
-              </Button>
+              <Link href="#contact">
+                <Button>Umów wizytę</Button>
+              </Link>
             </div>
-
           </div>
         </div>
       </div>
