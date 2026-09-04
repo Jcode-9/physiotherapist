@@ -3,8 +3,6 @@ import SectionHeading from "../ui/SectionHeading";
 import { servicesData } from "@/data/services";
 import Card from "../ui/Card";
 import Button from "../ui/Button";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 export default function Services() {
   return (
@@ -25,19 +23,19 @@ export default function Services() {
                 <p className="mb-8 leading-7 text-slate-600">
                   {service.shortDescription}
                 </p>
-                <Link href={`#${service.id}`}>
-                  <Button variant="secondary">Dowiedz się więcej →</Button>
-                </Link>
+                <Button variant="secondary" href={`#${service.id}`}>
+                  Dowiedz się więcej →
+                </Button>
               </Card>
             );
           })}
         </div>
         <div className="mt-2 flex justify-center lg:mt-6">
-
-          <Button className="px-8 py-3 text-base sm:px-10 sm:text-lg">
-            <Link href="#detailed-services">
-              Zobacz wszystkie usługi →
-            </Link>
+          <Button
+            href="#detailed-services"
+            className="px-8 py-3 text-base sm:px-10 sm:text-lg"
+          >
+            Zobacz wszystkie usługi →
           </Button>
         </div>
       </div>

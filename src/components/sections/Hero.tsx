@@ -30,16 +30,12 @@ export default function Hero() {
           {/* CTA */}
           <div className="flex flex-col gap-4 sm:flex-row">
             
-            <Button>
-              <Link href="#contact">
+            <Button href="#contact">
               {heroData.buttons.primary}
-              </Link>
             </Button>
 
-            <Button variant="secondary">
-              <Link href="#detailed-services">
+            <Button variant="secondary" href="#detailed-services">
               {heroData.buttons.secondary}
-              </Link>
             </Button>
           </div>
 
@@ -58,7 +54,14 @@ export default function Hero() {
         {/* Right column */}
         <div className="order-1 lg:order-2">
           <div className="relative h-[350px] overflow-hidden rounded-2xl bg-slate-200 shadow lg:h-[550px]">
-            <Image priority src="/images/physio2.jpg" fill alt="Fizjoterapeuta podczas terapii z pacjentem" className="object-cover"/>
+            <Image
+              src="/images/physio2.webp"
+              fill
+              alt="Fizjoterapeuta podczas terapii z pacjentem"
+              preload
+              fetchPriority="high"
+              className="object-cover"
+            />
             <div className="bg-slate-400/80 backdrop-blur-xs px-4 py-3 lg:px-5 lg:py-4 rounded-3xl absolute bottom-2 right-2 text-right">
               <p className="text-xl lg:text-2xl">⭐⭐⭐⭐⭐</p>
               <p className="text-2xl lg:text-3xl text-white">4.9/5</p>

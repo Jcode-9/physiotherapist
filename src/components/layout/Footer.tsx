@@ -34,29 +34,29 @@ export default function Footer() {
 
             {/* Social media */}
             <div className="mt-6 flex gap-3">
-              <Link
-                href="#"
+              <a
+                href="https://www.facebook.com"
                 aria-label="Facebook"
                 className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-800 bg-slate-900 transition-colors hover:border-blue-500 hover:bg-blue-600 hover:text-white"
               >
                 <FaFacebookF className="h-5 w-5" />
-              </Link>
+              </a>
 
-              <Link
-                href="#"
+              <a
+                href="https://www.instagram.com"
                 aria-label="Instagram"
                 className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-800 bg-slate-900 transition-colors hover:border-blue-500 hover:bg-blue-600 hover:text-white"
               >
                 <FaInstagram className="h-5 w-5" />
-              </Link>
+              </a>
 
-              <Link
-                href="#"
+              <a
+                href="https://www.aedin.com"
                 aria-label="LinkedIn"
                 className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-800 bg-slate-900 transition-colors hover:border-blue-500 hover:bg-blue-600 hover:text-white"
               >
                 <FaLinkedinIn className="h-5 w-5" />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -67,40 +67,40 @@ export default function Footer() {
             </h3>
 
             <nav className="mt-5 flex flex-col gap-3">
-              <Link
+              <a
                 href="#about"
                 className="transition-colors hover:text-blue-400"
               >
                 O mnie
-              </Link>
+              </a>
 
-              <Link
+              <a
                 href="#services"
                 className="transition-colors hover:text-blue-400"
               >
                 Usługi
-              </Link>
+              </a>
 
-              <Link
+              <a
                 href="#pricing"
                 className="transition-colors hover:text-blue-400"
               >
                 Cennik
-              </Link>
+              </a>
 
-              <Link
+              <a
                 href="#testimonials"
                 className="transition-colors hover:text-blue-400"
               >
                 Opinie
-              </Link>
+              </a>
 
-              <Link
+              <a
                 href="#contact"
                 className="transition-colors hover:text-blue-400"
               >
                 Kontakt
-              </Link>
+              </a>
             </nav>
           </div>
 
@@ -177,12 +177,12 @@ export default function Footer() {
               © 2026 PhysioPro. Wszelkie prawa zastrzeżone.
             </p>
 
-            <Link
+            <a
               href="#top"
               className="transition-colors hover:text-blue-400"
             >
               Wróć na górę ↑
-            </Link>
+            </a>
           </div>
         </div>
       </div>
